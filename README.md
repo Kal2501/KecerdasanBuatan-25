@@ -8,3 +8,10 @@
 - Heatmap korelasi memperlihatkan bahwa atribut `Inches` tidak berkorelasi kuat dengan `Price_euros`, sehingga ukuran layar bukan faktor utama dalam menentukan harga. Dan attribute numeriik tidak saling terhubung atau berkorelasi.
 - <img width="486" height="374" alt="image" src="https://github.com/user-attachments/assets/cfff9833-e9e2-4fcb-b360-cb870fd6a100" />
 - Variasi harga laptop lebih banyak dipengaruhi oleh spesifikasi lain seperti CPU, GPU, RAM, dan tipe penyimpanan.
+## Posttest 3
+- Handling missing values, handling duplicate value tidak dilakukan karena tidak adanya record yang kosong dan duplikat
+- Handling outliers saya lakukan 3 kali menggunakan metode IQR untuk mendapatkan data paling bersih tanpa outliers seperti yang ditampilkan
+- Melakukan encoding pada kolom kategorikal seperti Company, TypeName, Opsys menjadi format numerik agar bisa diproses model ML
+- Normalisasi numerik agar memiliki rentang yang seragam
+- Feature engineering berupa kategorisasi agar lebih mudah diinterpretasikan
+- Melakukan split dan menghasilkan 1042 untuk data training dan 261 untuk data test
