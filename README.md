@@ -29,7 +29,7 @@ Variable X:
 - **Linear Regression**: Bisa underfit karena hubungan harga laptop tidak linear hanya pada 3 fitur ini.
 - **Random Forest**: Cenderung memberikan hasil terbaik dengan R² lebih tinggi, karena bisa menangkap hubungan non-linear.
 - **SVR (RBF)**: Memberikan hasil menengah, cukup baik tapi biasanya lebih lambat dibanding Random Forest.
-###Kesimpulan:
+### Kesimpulan:
 - Dengan fitur numerik sederhana (`Inches`, `Ram`, `Weight`), model masih bisa memprediksi harga dengan cukup baik.
 - Fitur `Ram` biasanya paling berpengaruh, sedangkan `Inches` dan `Weight` memberikan tambahan variasi.
 
