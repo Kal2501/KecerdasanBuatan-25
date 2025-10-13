@@ -18,7 +18,7 @@
 ## Posttest4
 Dataset: `laptop_price.csv`
 Target (y): `Price_euros` (numerik)  
-Fitur (X):  
+Variable X:  
 - `Inches`  → ukuran layar (inch)  
 - `Ram`     → kapasitas RAM (GB)  
 - `Weight`  → bobot laptop (kg)  
