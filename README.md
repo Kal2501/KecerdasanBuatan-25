@@ -15,3 +15,21 @@
 - Normalisasi numerik agar memiliki rentang yang seragam
 - Feature engineering berupa kategorisasi agar lebih mudah diinterpretasikan
 - Melakukan split dan menghasilkan 1042 untuk data training dan 261 untuk data test
+## Posttest4
+Dataset: `laptop_price.csv`
+Target (y): `Price_euros` (numerik)  
+Fitur (X):  
+- `Inches`  → ukuran layar (inch)  
+- `Ram`     → kapasitas RAM (GB)  
+- `Weight`  → bobot laptop (kg)  
+### Alasan pakai label numerik
+- Karena ketiganya merupakan variabel numerik murni yang langsung dapat dipakai oleh model regresi.  
+- Ukuran layar, kapasitas RAM, dan berat laptop biasanya berkorelasi dengan harga laptop (misalnya: ultrabook ringan lebih mahal, RAM tinggi lebih mahal, layar besar biasanya segmen high-end).
+### Hasil Evaluasi (contoh, angka tergantung data split):
+- **Linear Regression**: Bisa underfit karena hubungan harga laptop tidak linear hanya pada 3 fitur ini.
+- **Random Forest**: Cenderung memberikan hasil terbaik dengan R² lebih tinggi, karena bisa menangkap hubungan non-linear.
+- **SVR (RBF)**: Memberikan hasil menengah, cukup baik tapi biasanya lebih lambat dibanding Random Forest.
+**Kesimpulan:**
+- Dengan fitur numerik sederhana (`Inches`, `Ram`, `Weight`), model masih bisa memprediksi harga dengan cukup baik.
+- Fitur `Ram` biasanya paling berpengaruh, sedangkan `Inches` dan `Weight` memberikan tambahan variasi.
+
