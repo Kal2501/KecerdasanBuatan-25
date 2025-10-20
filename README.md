@@ -32,4 +32,22 @@ Variable X:
 ### Kesimpulan:
 - Dengan fitur numerik sederhana (`Inches`, `Ram`, `Weight`), model masih bisa memprediksi harga dengan cukup baik.
 - Fitur `Ram` biasanya paling berpengaruh, sedangkan `Inches` dan `Weight` memberikan tambahan variasi.
-
+## Posttest 5
+Dataset: `laptop_price.csv`
+### Alasan kenapa masih memakai dataset yang sama
+- Dataset ini sudah bersih
+- Targetnya jelas
+- Datanya sudah saya pelajari
+### Langkah-langkah
+- Load dataset
+- Ambil kolom target, masih sama yaitu `Price_euros`
+- Binning target jadi kategorikal yang terdiri dari 3 kategori
+- Pisahin fitur sama target. Fitur di encode pakai LableEncoder buat kolom kategorikal. Buat fitur numerik di normalisasi pakai scaling
+- Encode target
+- Split data train sama test dengan ukuran 80/20
+- Buat model dengan 2 hidden layer yang dimana hidden layer 1 punya 128 neuron dan hidden layer 2 punya 64 neuron dengan fungsi aktivasi ReLU
+- Output layer 3 neuron dengan menggunakan fungsi aktivasi softmax
+- Proses Training
+- Lalu evaluasi
+### Kesimpulan
+Dari yang saya kerjakan ini, model yang saya buat cukup pintar buat ngeklasifikasiin harga. Awal run saya pakai one hot encoder buat kolo kategorikal tapi keliatannya model jadi kurang pintar karena cuman pakai biner di kategori yang banyak. Jadi saya ganti ke LableEncoder untuk encoding kolom kategorikal. Untuk akurasi, pada saat menggunakan OneHot di epoch pertama sempat 48%, di epoch kedua langsung naik ke 72%. Epoch ke-3 sudah 100%. Setelah saya ganti ke LableEncoder, epoch 1 di 68%, epoch 2 sudah langsung 100%. Hasil yang saya masukkan kedalam github sudah dengan tingkat akurasi 100%.
